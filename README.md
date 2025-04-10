@@ -90,19 +90,70 @@ npm run dev
 
 ## 🛠 API Endpoints
 
-### **Auth Routes**
-| Method | Route              | Description        |
-|--------|--------------------|--------------------|
-| POST   | `/api/auth/signup` | Register new user  |
-| POST   | `/api/auth/login`  | Login with email/password |
+Base URL: `http://localhost:3000/api/`
 
-### **(Coming Soon) Task Routes**
+---
+
+### **Auth Routes**
+| Method | Route             | Description       |
+|--------|-------------------|-------------------|
+| POST   | `/auth/signup`    | User signup       |
+| POST   | `/auth/login`     | User login        |
+
+---
+
+### **Task Routes**
+| Method | Route                    | Description         |
+|--------|--------------------------|---------------------|
+| GET    | `/tasks?page=1`          | Get all tasks       |
+| POST   | `/tasks`                 | Create new task     |
+| PUT    | `/tasks/9`               | Update task         |
+| DELETE | `/tasks/7`               | Delete task         |
+
+---
+
+### **Comment Routes**
+| Method | Route                             | Description         |
+|--------|-----------------------------------|---------------------|
+| GET    | `/tasks/1/comments`               | Get comments        |
+| POST   | `/tasks/9/comments`               | Add comment         |
+| PUT    | `/tasks/1/comments/1`             | Update comment      |
+
+---
+
+### **GraphQL**
 | Method | Route              | Description        |
 |--------|--------------------|--------------------|
-| GET    | `/api/tasks`       | Get all tasks      |
-| POST   | `/api/tasks`       | Create new task    |
-| PUT    | `/api/tasks/:id`   | Update task        |
-| DELETE | `/api/tasks/:id`   | Delete task        |
+| GET    | `/graphql`         | Control Tasks      |
+
+---
+
+### **Category Routes**
+| Method | Route                   | Description           |
+|--------|-------------------------|-----------------------|
+| GET    | `/categories?page=1`    | Get all categories    |
+| POST   | `/categories`           | Add category          |
+| PUT    | `/categories/1`         | Update category       |
+| DELETE | `/categories/2`         | Delete category       |
+
+---
+
+### **Admin Routes**
+| Method | Route                   | Description             |
+|--------|-------------------------|-------------------------|
+| POST   | `/users`                | Add user (admin)        |
+| PUT    | `/users/24`             | Update user (admin)     |
+| GET    | `/users`                | Get users               |
+| GET    | `/logs?page=1`          | Task log                |
+| GET    | `/users/2/tasks`        | Get tasks for a user    |
+
+---
+
+### **Swagger docs**
+| Method | Route              | Description        |
+|--------|--------------------|--------------------|
+| GET    | `/api-docs`        | Swagger docs       |
+
 
 ---
 
