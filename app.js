@@ -12,6 +12,7 @@ const commentRoutes = require('./routes/comment');
 const categoryRoutes = require('./routes/category');
 const userRoutes = require('./routes/user');
 const logRoutes = require('./routes/log');
+const cors = require('cors');
 require('./cron');
 
 const prisma = new PrismaClient();
@@ -20,6 +21,12 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+
+app.use(cors({
+    // origin: 'http://localhost:5000', // Allow requests from this origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Connect to PostgreSQL using Prisma
 prisma.$connect()

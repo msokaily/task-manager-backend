@@ -39,7 +39,7 @@ Includes JWT-based authentication, role-based access, and full CRUD for tasks.
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/msokaily/task-manager-backend.git
 cd task-manager/
 ```
 
